@@ -1,4 +1,5 @@
-import { Grid, Container, Card } from "@material-ui/core";
+import React, { useCallback } from 'react';
+import { Container, Card } from "@material-ui/core";
 import useKeyboardStyles from './styles/keyboard-style';
 
 const rows = [
@@ -7,15 +8,34 @@ const rows = [
     ["↵","Z","X","C","V","B","N","M","←",]
 ]
 
-function Keyboard() {
+function Keyboard(props) {
     const classes = useKeyboardStyles();
+
+    const handleClick = useCallback((value) => {
+        switch(value) {
+            case '↵':
+                props.inputCallback("ENTER");
+                break;
+            case '←':
+                props.inputCallback("BACKSPACE");
+                break;
+            default:
+                props.inputCallback(value);
+        }
+    }, [props]);
 
     return (
         <Container className={classes.keyboard}>
             {rows.map((row, idx) => {
                 return (<div className={classes.row} key={idx}>
                     {row.map((letter, idx) => {
-                        return (<Card className={classes.button} key={idx}>{letter}</Card>)
+                        return (
+                            <Card className={classes.button}
+                                key={idx}
+                                onClick={() => handleClick(letter)}
+                            >
+                                {letter}
+                            </Card>)
                     })}
                 </div>)
             })}

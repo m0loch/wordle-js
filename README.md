@@ -14,10 +14,6 @@ Use it as a component.
 @material-ui/core
 
 ## Work that still needs to be done
-1. words insertion
-    - actual keyboard
-    - keyboard component
-2. check for valid words
-3. checks for win
-4. hints
-5. word randomization
+1. checks for win
+2. hints
+3. word randomization
