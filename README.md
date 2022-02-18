@@ -14,6 +14,5 @@ Use it as a component.
 @material-ui/core
 
 ## Work that still needs to be done
-1. checks for win
-2. hints
-3. word randomization
+1. modals (with new game on end)
+2. animations

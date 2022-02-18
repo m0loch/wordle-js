@@ -4,7 +4,6 @@ const useKeyboardStyles = makeStyles({
   keyboard: {
     maxWidth: "500px",
     userSelect: "none",
-  //   backgroundColor: "var(--header-background)",
     borderRadius: "5px",
   },
   row: {
@@ -25,54 +24,22 @@ const useKeyboardStyles = makeStyles({
     cursor: "pointer",
     userSelect: "none",
     backgroundColor: "var(--square-color)",
-    color: "var(--key-text-color)",
+    color: "var(--letter-color)",
     flex: 1,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     textTransform: "uppercase",
   },
-/*  button:focus {
-    outline: "none",
-  },*/
-/*  button.fade {
-    transition: background-color 0.1s ease, color 0.1s ease;
-  }*/
-/*  
-  button:last-of-type {
-    margin: 0;
-  }*/
-  
-//   half: {
-//     flex: 0.5,
-//   }
-//   .one {
-//     flex: 1;
-//   }
-
-//   .one-and-a-half {
-//     flex: 1.5;
-//     font-size: 12px;
-//   }
-  
-//   .two {
-//     flex: 2;
-//   }
-
-//   button[data-state='correct'] {
-//     background-color: var(--key-bg-correct);
-//     color: var(--key-evaluated-text-color);
-//   }
-
-//   button[data-state='present'] {
-//     background-color: var(--key-bg-present);
-//     color: var(--key-evaluated-text-color);
-//   }
-
-//   button[data-state='absent'] {
-//     background-color: var(--key-bg-absent);
-//     color: var(--key-evaluated-text-color);
-//   }
+  correct: {
+    backgroundColor: "var(--correct-letter)",
+  },
+  misplaced: {
+    backgroundColor: "var(--misplaced-letter)",
+  },
+  wrong: {
+    backgroundColor: "var(--wrong-letter)",
+  }
 });
 
 export default useKeyboardStyles;

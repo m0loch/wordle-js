@@ -28,7 +28,7 @@ const useComponentStyles = makeStyles({
   tile: {
     display: "inline-flex",
     backgroundColor: "var(--square-color)",
-    color: "var(--a-color)",
+    color: "var(--letter-color)",
     alignContent: "center",
     justifyContent: "center",
     width: "62px",
@@ -39,6 +39,12 @@ const useComponentStyles = makeStyles({
   },
   hole: {
     opacity: "0",
+  },
+  correct: {
+    backgroundColor: "var(--correct-letter)",
+  },
+  misplaced: {
+    backgroundColor: "var(--misplaced-letter)",
   },
 });
 
